@@ -5,7 +5,6 @@ divisas = {
     'ARS': 1150,
     'BRL': 5.62
 }
-# Inputs
 plata_tot = float(input("¿Cuánto dinero desea convertir? "))
 plata_act = input("¿Que moneda posee (USD, EUR, ARS, BRL)? ").upper()
 plata_nue = input("¿A que moneda desea hacer la conversión (USD, EUR, ARS, BRL)? ").upper()
@@ -28,7 +27,7 @@ if plata_nue == 'BRL':
 # Calculo de resultado e impresion por pantalla
 resultado = plata_tot * (den/num)
 print("El total convertido es de ", resultado, " ", plata_nue)
-# Guardar en archivo txt
+# Guardar en archivo 
 with open("historial.txt", "a") as archivo:
     archivo.write(f"{plata_tot} {plata_act} -> {resultado:.2f} {plata_nue}\n")
 # Borrar historial
